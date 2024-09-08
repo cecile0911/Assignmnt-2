@@ -1,0 +1,91 @@
+<!doctype html>
+<head>
+    <title> A Q U A </title>
+
+    <style>
+        .row{
+            width: 720px;
+            margin: 10px auto 10px auto ;
+        }
+        .image-container{
+            display: table-cell;
+            vertical-align: middle;
+            padding: 20px;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+</head>
+
+<body style="background-color: darkcyan;">
+   <h1>
+       My first website
+   </h1>
+   <div class="row">
+       <div class="image-container"><img id="asset1" src="img/Asset 5@2x.png" width="200" height="200"/></div>
+       <div class="image-container"><img id="asset2" src="img/bear@2x.png" width="200" height="200"/></div>
+       <div class="image-container"><img id="asset3" src="img/penguin@2x.png" width="200" height="200"/></div>
+    </div>
+    <div class="row">
+        <div class="image-container"><img id="asset4" src="img/turtle@2x.png" width="200" height="200"/></div>
+        <div class="image-container"><img id="asset5" src="img/shark@2x.png" width="200" height="200"/></div>
+        <div class="image-container"><img id="asset6" src="img/seahorse@2x.png" width="200" height="200"/></div>
+    </div>
+    <div class="row">
+        <div class="image-container"><img id="asset7" src="img/jellyfish@2x.png" width="200" height="200"/></div>
+        <div class="image-container"><img id="asset8" src="img/seal@2x.png" width="200" height="200"/></div>
+        <div class="image-container"><img id="asset9" src="img/octopus@2x.png" width="200" height="200"/></div>
+    <img src="img/octopus@2x.png"  onmouseover="this.src='img/octopus_02.png';" onmouseout="this.src='img/octopus@2x.png';"/>
+    <script>
+
+        const cir_variable = document.getElementById ('cir_id')
+        const cir_audio = new Audio ('sound/sound_4.mp3')
+        cir_variable.onpointerdown = () => cir_audio.play ()
+            </script>
+<script>
+const cir_variable = document.getElementById ('cir_id')
+const cir_audio = new Audio ('sounds/1.mp3')
+
+cir_variable.onpointerdown = () => {
+    cir_audio.play ()
+    cir_variable.src = 'img/octopus@2x.png'
+    setTimeout (() => { 
+        cir_variable.src = 'img/octopus_02.png'
+    }, 1000)
+}
+
+const tri_variable = document.getElementById ('tri_id')
+const tri_audio = new Audio ('sounds/2.mp3')
+
+tri_variable.onpointerdown = () => tri_audio.play ()
+
+tri_variable.onpointerover = () => {
+    tri_variable.src = 'img/octopus_02.png'
+}
+
+tri_variable.onpointerout = () => {
+    tri_variable.src = 'img/octopus@2x.png'
+}
+
+</script>
+    </div>
+    <script>
+        var sound1 = new buzz.sound("sound/sound_1.mp3");
+        var sound2 = new buzz.sound("sound/sound_2.mp3");
+        var sound3 = new buzz.sound("sound/sound_3.mp3");
+
+        window.onload = function() {
+            document.getElementById('asset1').addEventListener('click', function(){sound1.play();});
+            document.getElementById('asset2').addEventListener('click', function(){sound2.play();});
+            document.getElementById('asset3').addEventListener('click', function(){sound3.play();});
+            document.getElementById('asset4').addEventListener('click', function(){sound2.play();});
+            document.getElementById('asset5').addEventListener('click', function(){sound2.play();});
+            document.getElementById('asset6').addEventListener('click', function(){sound2.play();});
+            document.getElementById('asset7').addEventListener('click', function(){sound2.play();});
+            document.getElementById('asset8').addEventListener('click', function(){sound2.play();});
+            document.getElementById('asset9').addEventListener('click', function(){sound2.play();});
+        };
+    </script>
+   
+    
+</body>
